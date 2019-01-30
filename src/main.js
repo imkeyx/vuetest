@@ -13,6 +13,11 @@ import 'styles/iconfont.css'
 src/assets/styles这个路径经常用，就可以对这个路径进行别名操作
 简写成styles就可以了
 */
+/*
+fastclick是修正移动端点击链接时可能延时300毫秒才执行的问题，
+通过NPM下载这个文件，引用这个文件，
+然后fastclick.attach(document.body)就能解决这个问题
+*/
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
