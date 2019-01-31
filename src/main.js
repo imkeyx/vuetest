@@ -4,9 +4,15 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 import fastclick from 'fastclick'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
 import 'styles/reset.css'
 import 'styles/border.css'
 import 'styles/iconfont.css'
+import 'swiper/dist/css/swiper.css'
+/*
+vue-awesome-swiper是一个vue轮播图插件，
+引入它然后引入它的css文件
+*/
 /*
 如果同一个url使用次数很多，可以在webpack.base.conf.js修改
 配置项，修改resolve可以对常用的路径修改别名，比方说
@@ -21,6 +27,7 @@ fastclick是修正移动端点击链接时可能延时300毫秒才执行的问�
 
 Vue.config.productionTip = false
 fastclick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({
