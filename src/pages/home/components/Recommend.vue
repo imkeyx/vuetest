@@ -2,7 +2,7 @@
   <div>
     <div class="title">热销推荐</div>
     <ul>
-      <li class="item border-bottom" v-for="(item, index) of recommendList" :key='index'>
+      <li class="item border-bottom" v-for="(item, index) of list" :key='index'>
         <img class="item-img" :src="item.imgUrl">
         <div class="item-info">
           <p class="item-title">{{item.title}}</p>
@@ -17,25 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data: function () {
-    return {
-      recommendList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1901/a6/a6569d2d53c6c637a3.water.jpg_200x200_f135cf7f.jpg',
-        title: '东部华侨城茶溪谷',
-        desc: '东部华侨城茶溪谷,东部华侨城茶溪谷,东部华侨城茶溪谷。'
-      }, {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1508/2e/d9363ce50a88c8c5ff5a138c67687cd4.water.jpg_200x200_1c15c8f5.jpg',
-        title: '深圳野生动物园',
-        desc: '深圳野生动物园,深圳野生动物园,深圳野生动物园。'
-      }, {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1507/64/34362835b4a219af8b36803d31a6380f.water.jpg_200x200_bc5c0452.jpg',
-        title: '深圳小梅沙海洋世界',
-        desc: '深圳小梅沙海洋世界,深圳小梅沙海洋世界,深圳小梅沙海洋世界。'
-      }]
-    }
+  props: {
+    list: Array
   }
 }
 </script>
