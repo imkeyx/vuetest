@@ -30,7 +30,7 @@ export default {
       timer: null
     }
   },
-  computer: {
+  computed: {
     hasNoData () {
       return !this.list.length
     }
